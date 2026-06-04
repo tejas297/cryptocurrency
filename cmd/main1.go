@@ -1,3 +1,5 @@
+package main
+
 // this test file should verify :
 
 // ✓ Wallet creation
@@ -11,8 +13,6 @@
 // ✓ Ownership verification
 // ✓ Tamper detection
 
-package main
-
 import (
 	"fmt"
 
@@ -20,7 +20,7 @@ import (
 	"github.com/tejas/tejascoin/internal/wallet"
 )
 
-func main() {
+func main2() {
 
 	// Create blockchain
 	bc := blockchain.NewBlockchain()

@@ -237,6 +237,7 @@ current state :
 
 - now validation becomes :
 
+```
 Public Key
       ↓
 create Address from pub key
@@ -250,3 +251,54 @@ Verify Signature
 YES
 
 Accept
+```
+current rest API implemented :
+
+POST /wallet
+GET  /balance/{address}
+GET  /chain
+POST /faucet
+POST /transaction
+POST /mine
+
+
+full test flow :
+
+```
+Create Alice
+Create Bob
+Create Miner
+       ↓
+Faucet Alice
+       ↓
+Alice Balance = 100
+       ↓
+POST /transaction
+       ↓
+Transaction enters mempool
+       ↓
+POST /mine
+       ↓
+Block created
+       ↓
+Alice = 75
+Bob = 25
+Miner = 50
+
+```
+
+## we have completed the single node cryptocurrency prototype with below functionality :
+
+```
+✓ Wallet generation
+✓ Addresses
+✓ Digital signatures
+✓ Transaction validation
+✓ Mempool
+✓ Mining
+✓ Mining rewards
+✓ Balance tracking
+✓ REST API
+✓ Blockchain explorer (/chain)
+```
+
